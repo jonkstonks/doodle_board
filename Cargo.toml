@@ -1,5 +1,5 @@
 [package]
-name = "cargo_doodle"
+name = "doodle_board"
 version = "0.1.0"
 authors = ["Johanna Okas <johannaokas@gmail.com>"]
 edition = "2024"
@@ -11,3 +11,5 @@ eframe = { version = "0.34.1", features = ["persistence"] }
 # Serde is only needed for app persistence
 serde = { version = "1.0.219", features = ["derive"] }
 chrono = "0.4.44"
+
+env_logger = "0.11.8"
