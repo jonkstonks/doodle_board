@@ -1,4 +1,5 @@
 use egui::{Color32, RichText};
+use chrono::{DateTime, Local};
 
 use crate::painting::Painting;
 
@@ -49,8 +50,14 @@ impl eframe::App for TemplateApp {
                 // ui.add_space pushes content, but for far-right alignment, we use:
                 ui.with_layout(egui::Layout::right_to_left(egui::Align::Center), |ui| {
                     // TODO: digital clock goes here
-                    // For now, a placeholder:
-                    ui.label(RichText::new("12:34 PM").color(Color32::MAGENTA));
+                    let now = chrono::Local::now();
+                    let time_str = now.format("%H:%M").to_string();
+
+                    ui.label(
+                    RichText::new(time_str)
+                            .color(Color32::MAGENTA)
+                            .monospace()
+                    );
                 });
             });
         });
@@ -61,6 +68,8 @@ impl eframe::App for TemplateApp {
                 // TODO: global_theme_preference_buttons go here
                 // For now, a placeholder:
                 ui.label(RichText::new("Theme: [ ]").color(Color32::LIGHT_BLUE));
+                ui.separator();
+                ui.label(RichText::new("Doodle Board by jonks").color(Color32::MAGENTA));
             });
         });
 

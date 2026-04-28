@@ -31,7 +31,7 @@ impl Painting {
     }
 
     pub fn ui_content(&mut self, ui: &mut Ui) -> egui::Response {
-        let size = ui.available_size_before_wrap() - egui::vec2(0.0, 24.0);
+        let size = ui.available_size_before_wrap() - egui::vec2(0.0, 0.0);
         
         let (mut response, painter) = ui.allocate_painter(size, Sense::drag());
 
