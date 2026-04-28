@@ -13,6 +13,9 @@ Currently missing file saving and theme changing functionalities.
 - File export *(in progress)*
 - Dark / Light theme *(in progress)*
 
+### Screenshot
+![alt text](image.png)
+
 ### Getting started
 ```bash
 git clone https://github.com/jonkstonks/doodle_board
